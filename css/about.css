@@ -1,0 +1,139 @@
+
+.achievements {
+  text-align: left !important;
+}
+
+.achi-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  padding: 4rem 0 1rem;
+}
+
+.achi-container h1 {
+  font-size: 2.2rem;
+}
+
+.core {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.7rem;
+  text-align: center;
+}
+
+.ach {
+  width: 100%;
+  padding: 3rem 3rem;
+}
+
+.icon {
+  padding: 1rem !important;
+}
+
+/* team section starts -------------------- */
+
+.team-sec {
+  background-color: var(--color-bg1);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+article{
+    transition: all 1s ease;
+}
+.team{
+  width: 100%;
+  background-color: var(--color-bg2);
+  position: relative;
+  transition:all 400ms linear;
+  overflow: hidden;
+
+  padding: 1.5rem 1rem .5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+.team small {
+  color: var(--color-light);
+}
+.team-img {
+  border-radius: 15px;
+  filter: grayscale(100%);
+}
+.team-social-links{
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 0 0 1rem;
+    transition: var(--transition);
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  
+}
+.team-social-links a{
+    display: block;
+    padding: .7rem;
+  
+}
+.team-social-links a:hover{
+    background-color: var(--color-bg1);
+}
+.team:hover .team-img {
+    filter: grayscale(0%);
+}
+.team:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+.team:hover .team-social-links{
+      right: 0;
+}
+
+/* ==========MEDIA QUERRIES FOR TABLETS======== */
+
+@media (max-width:1024px){
+
+    /* Achievement  */
+    .achievement{
+        margin-top: 2rem;
+    }
+    .achi-container{
+        grid-template-columns: 1fr;
+    }
+    .achi-left img{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* team section  */
+
+    .team-container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* mobile media querry -------------- */
+@media (max-width:600px){
+    .core{
+        grid-template-columns: 1fr;
+        width: 70%;
+        margin: 0 auto;
+        
+    }
+    .achi-right{
+        text-align: center;
+    }
+    .team-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
